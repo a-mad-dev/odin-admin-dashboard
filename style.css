@@ -7,3 +7,21 @@
 .app {
 	height: 100vh;
 }
+
+/* Placeholder styles */
+
+.sidebar {
+	background-color: deepskyblue;
+}
+
+.header {
+	background-color: lightgray;
+}
+
+.main {
+	background-color: aquamarine;
+}
+
+.dashboard {
+	display: grid;
+}

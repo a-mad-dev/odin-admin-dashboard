@@ -2,26 +2,64 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	outline: 2px solid red;
 }
 
 .app {
-	height: 100vh;
+	height: 100vh; /* fits screen width */
+	font-family: 'Roboto', "Inter", "JetBrains Mono NL", sans-serif, system-ui;
 }
 
-/* Placeholder styles */
+/* ---------------------------------------------------------- */
+
+/* LAYOUT */
+.dashboard {
+	display: grid;
+	grid-template-columns: 250px 1fr;
+	grid-template-rows: 100px 1fr;
+	height: 100%;
+}
 
 .sidebar {
-	background-color: deepskyblue;
+	grid-row: 1 / 3;
+	display: flex;
+	flex-direction: column;
+	gap: 70px;
 }
 
 .header {
-	background-color: lightgray;
+	grid-column: 2;
+	display: grid;
+	grid-template-columns: 1fr 400px;
+	grid-template-rows: 1fr 1fr;
 }
 
 .main {
-	background-color: aquamarine;
+	grid-column: 2;
+	display: grid;
+	grid-template-columns: 1fr 300px;
 }
 
-.dashboard {
+.cards {
 	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.panel {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+/* ------------------------------------------------------- */
+
+/* Styles */
+
+.sidebar {
+	background-color: deepskyblue;
+	color: white;
+}
+
+.logo-text {
+	font-size: 36px;
 }
